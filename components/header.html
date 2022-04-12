@@ -21,7 +21,8 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="btn btn-secondary btn-sm d-none d-lg-inline" href="../index.html#contact">Apply to Membership</a>
+                    <a class="btn btn-secondary btn-sm d-none d-lg-inline" href="../index.html#contact">Apply to
+                        Membership</a>
                 </li>
             </ul>
         </div>
@@ -39,21 +40,11 @@
             navbars.classList.add("is-scrolled");
         }
     }, false);
-
-    var toggle = document.querySelector('.navbar-toggler');
-    var navbar = document.querySelector('.navbar-collapse ');
-    var showNavbar = true;
-    toggle.addEventListener("click", function () {
-        if(showNavbar) {
-            navbar.classList.add('show');
-        }else{
-            navbar.classList.toggle('show')
-        }
-        
-    })
+    
     var toggle = document.querySelector('#burger');
     var navbar = document.querySelector('#navbarToggler');
     toggle.addEventListener("click", function () {
-        navbar.classList.toggle('show'); 
+        navbar.classList.toggle('show');
+
     })
 </script>
