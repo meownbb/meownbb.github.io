@@ -4,7 +4,7 @@
         <div class="d-lg-none ms-auto me-2 btn-apply">
             <a class="btn btn-secondary btn-sm" href="#">Apply to Membership</a>
         </div>
-        <button class="navbar-toggler" type="button">
+        <button class="navbar-toggler" type="button" id="burger">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarToggler">
@@ -40,10 +40,20 @@
         }
     }, false);
 
-
+    var toggle = document.querySelector('.navbar-toggler');
     var navbar = document.querySelector('.navbar-collapse ');
-
-    document.addEventListener("click", function () {
-        navbar.classList.toggle('show')
+    var showNavbar = true;
+    toggle.addEventListener("click", function () {
+        if(showNavbar) {
+            navbar.classList.add('show');
+        }else{
+            navbar.classList.toggle('show')
+        }
+        
+    })
+    var toggle = document.querySelector('#burger');
+    var navbar = document.querySelector('#navbarToggler');
+    toggle.addEventListener("click", function () {
+        navbar.classList.toggle('show'); 
     })
 </script>
