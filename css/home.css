@@ -188,7 +188,22 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  width: 20%;
+  border-radius: 0.75rem;
+  position: relative;
+  color:#fff;
+  background-color: transparent;
+  border: 2px solid #f9f5ac;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    opacity 0.15s ease-in-out, background-image 0.15s ease-in-out;
 }
+#submit-contact:hover,
+#submit-contact:focus {
+  background-image: linear-gradient(135deg, #d9abcc, #f9f5ac, #dea782);
+  color: #17191c;
+}
+
 #distribution {
   margin-top: -100px !important;
   padding-top: 100px;
