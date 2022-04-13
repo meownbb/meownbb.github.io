@@ -184,6 +184,11 @@
     grid-auto-rows: 1fr;
   }
 }
+@media (max-width: 768px) {
+  #submit-contact{
+    width: 45%;
+  }
+}
 #submit-contact{
   -webkit-appearance: none;
   -moz-appearance: none;
