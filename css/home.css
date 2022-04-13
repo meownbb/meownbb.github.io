@@ -184,7 +184,11 @@
     grid-auto-rows: 1fr;
   }
 }
-
+#submit-contact{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 #distribution {
   margin-top: -100px !important;
   padding-top: 100px;
