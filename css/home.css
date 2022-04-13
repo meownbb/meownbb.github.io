@@ -186,7 +186,7 @@
 }
 @media (max-width: 768px) {
   #submit-contact{
-    width: 45%;
+    width: 45% !important;
   }
 }
 #submit-contact{
