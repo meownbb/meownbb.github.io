@@ -134,8 +134,7 @@
                                         <stop offset="100%" stop-color="#dea782"></stop>
                                     </linearGradient>
                                 </defs>
-                                <text y="66" stroke="url(#linear)" fill="none" stroke-width="2"
-                                    >Fast</text>
+                                <text y="66" stroke="url(#linear)" fill="none" stroke-width="2">Fast</text>
                             </svg>
                             <svg viewBox="0 0 420 92" style="height: 4rem;">
                                 <defs>
@@ -145,8 +144,7 @@
                                         <stop offset="100%" stop-color="#dea782"></stop>
                                     </linearGradient>
                                 </defs>
-                                <text y="66" stroke="url(#linear)" fill="none" stroke-width="2"
-                                    >distribution.</text>
+                                <text y="66" stroke="url(#linear)" fill="none" stroke-width="2">distribution.</text>
                             </svg>
                             Friendly support team.
                         </h2>
@@ -246,21 +244,24 @@
             <div class="contact-wrapper">
                 <div class="contact-form">
                     <div class="contact-content">
-                        <form action="#" method="">
+                        <form action="#" method="" id="form">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="" placeholder="Name">
+                                    <input type="text" name="nameField" required placeholder="Name">
+                                    <div class="invalid-feedback">
+                                        Please choose a username.
+                                      </div>
                                 </div>
                                 <div class="col">
-                                    <input type="email" name="" placeholder="Email">
+                                    <input type="email" name="emailField" required placeholder="Email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col col-full">
-                                    <textarea placeholder="Message" rows="3"></textarea>
+                                    <textarea placeholder="Message" name="messageField" required rows="3"></textarea>
                                 </div>
                             </div>
-                            <a class="btn btn-secondary" id="submit-contact" type="submit">Submit</a>
+                            <input id="submit-contact" type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
@@ -317,16 +318,15 @@
     </div>
     <footer id="footer-nove">
     </footer>
-    <script type="text/javascript" src="/js/three.min.js"></script>
     <script type="text/javascript" src="/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#header-nove').load('../components/header.html');
             $('#footer-nove').load('../components/footer.html');
         });
-
         function scrollToContact() {
             const el = document.querySelector('#contact');
             const headerHeight = 70;
@@ -336,6 +336,28 @@
                 behavior: 'smooth'
             });
         }
+
+        var form = document.getElementById('form')
+        var submitInput = document.querySelector('input[type="submit"]')
+
+        function getDataForm(e) {
+            e.preventDefault();
+            var formData = new FormData(form);
+            if (formData.get('nameField') === '' || formData.get('emailField') === '' || formData.get('messageField') === '') {
+               
+            } else {
+                swal({
+                    text: "Thank you for your application! We will be get back to you shortly.",
+                    icon: "success",
+                    button: "Ok",
+                });
+
+            }
+            document.getElementById('form').reset();
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            submitInput.addEventListener('click', getDataForm, false);
+        }, false)
     </script>
 </body>
 
