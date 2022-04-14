@@ -87,11 +87,27 @@
 }
 @media (max-width: 768px) {
   .display-1 {
-    font-size: 2.5rem;
+    font-size: 1.6rem;
     width: 100%;
   }
+  h1 svg:nth-last-child(1){
+    width: 30% !important;
+  }
+  h1 svg:nth-last-child(2){
+    width: 27% !important;
+  }
+  h1 svg:nth-last-child(3){
+    width: 20% !important;
+  }
   .display-1 svg {
-    font-size: 2.5rem !important;
+    font-size: 1.7rem !important;
+  }
+  .display-1 svg:nth-child(1) {
+    height: 3rem !important;
+    width: 30% !important;
+  }
+  .display-1 svg:nth-child(2) {
+    width: 70% !important;
   }
   .display-3 {
     font-size: 2rem !important;
@@ -185,18 +201,18 @@
   }
 }
 @media (max-width: 768px) {
-  #submit-contact{
+  #submit-contact {
     width: 45% !important;
   }
 }
-#submit-contact{
+#submit-contact {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   width: 20%;
   border-radius: 0.75rem;
   position: relative;
-  color:#fff;
+  color: #fff;
   background-color: transparent;
   border: 2px solid #f9f5ac;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
