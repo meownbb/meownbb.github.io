@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   z-index: 9999 !important;
-  padding: 1.5rem;
+  padding: 1rem;
   right: 0;
   left: 0;
   transition: background-color 0.2s ease-in-out;
@@ -10,7 +10,9 @@
 .navbar.is-scrolled {
   background: rgba(23, 25, 28, 0.8);
 }
-
+img.img-logo {
+  height: 60px;
+}
 .navbar-brand {
   padding: 0;
 }
@@ -48,7 +50,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .btn-apply{
+  .btn-apply {
     display: none;
   }
 }
